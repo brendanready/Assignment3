@@ -17,6 +17,7 @@ var compChoice = Math.random();
 console.log(compChoice);
 
 // STEP 3
+
 var reset;
 
 function Outcome() {
@@ -34,6 +35,7 @@ compChoice = reset;
 console.log(compChoice);
 
 // STEPS 4, 5, 6
+
 function compare(userChoice, compChoice) {
     if (userChoice == "rock" && compChoice == "paper") {
         alert("You Lose!\n\n" + "You chose " + userChoice + " and the computer chose " + compChoice + ".");
@@ -91,15 +93,16 @@ compare(userChoice, compChoice);
 
 var num1 = parseFloat(prompt("Please enter a number."));
 console.log(num1);
+
 // STEP 2
 
 var num2 = parseFloat(prompt("Please enter a second number."));
 console.log(num2);
+
 // STEP 3
 
 var operation = prompt("Please choose an operation you would like to perform: add, subtract, multiply, or divide").toLowerCase();
 console.log(operation);
-
 
 // STEPS 4, 5, 6, 7
 
@@ -126,11 +129,10 @@ function calculate(x, y, z) {   // STEP 4
 calculate(operation, num1, num2);   // STEP 5
 */
 
-// Death by JavaScript 
+// Death by JavaScript
 
 // STEP 1
 /*
-
 var name = "webmaster";
 
 function alphabetize(string) {
@@ -144,7 +146,6 @@ console.log(alphabetize(name));
 
 // STEP 2
 /*
-
 var phrase = "the quick brown fox";
 
 function capitalize(string) {
@@ -159,7 +160,6 @@ console.log(capitalize(phrase));
 
 // STEP 3
 /*
-
 var phrase = "The quick brown fox";
 
 function countVowels(string) {
@@ -167,7 +167,6 @@ function countVowels(string) {
 }
 
 console.log(countVowels(phrase));
-
 */
 
 // STEP 4
@@ -177,25 +176,31 @@ function generateStringId() {
     var string = [];
     
     for (var i = 0; i < 8; i++) {
-        var r1 = Math.random();
-        var r2;
-        var r3 = Math.random();
-        var alpha = "abcdefghijklmnopqrstuvwxyz";
+        var rletter;
+        var rnum;
+        var rspecial;
+        var rnum1 = Math.random();
+        var rnum2 = Math.random();
+        var letter = "abcdefghijklmnopqrstuvwxyz";
         var num = "0123456789";
-        var a;
-        var b;
+        var special = "!#$%&*+-/<=>?@[\]^_{}~";
 
-        if (r1 < 0.5) {
-            randomNum2 = Math.floor(Math.random() * 26);
-            a = alpha.charAt(r2);
-                if (r3 > 0.5) {
-                   a = a.toUpperCase();
+
+        if (rnum1 < 0.333) {
+            rletter = Math.floor(Math.random() * letter.length);
+            letter = letter.charAt(rletter);
+                if (rnum2 > 0.5) {
+                   letter = letter.toUpperCase();
                 }
-            string.push(a);
-        } else if (r1 >= 0.5) {
-            r2 = Math.floor(Math.random() * 10);
-            b = num.charAt(r2);
-            string.push(b);
+            string.push(letter);
+        } else if (rnum1 >= 0.333 && rnum1 < 0.666) {
+            rnum = Math.floor(Math.random() * num.length);
+            num = num.charAt(rnum);
+            string.push(num);
+        } else if (rnum1 >= 0.666) {
+            rspecial = Math.floor(Math.random() * special.length);
+            special = special.charAt(rspecial);
+            string.push(special);
         }
     };
     string = string.join("");

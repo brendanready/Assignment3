@@ -14,7 +14,6 @@ window.console.log(favMovies[1]);
 
 // STEP 2
 /*
-
 var movies = new Array();
 movies[0] = "300";
 movies[1] = "Pulp Fiction";
@@ -22,19 +21,17 @@ movies[2] = "Dazed and Confused";
 movies[3] = "Scarface";
 movies[4] = "No Country For Old Men";
 window.console.log(movies[0]);
-
 */
+
 // STEP 3
 /*
-
 var movies = ["300", "Pulp Fiction", "Dazed and Confused", "Scarface", "No Country For Old Men"];
 movies.splice(2,0, "The Wolf of Wall Street");
 console.log(movies);
 console.log(movies.length);
-
 */
-// STEP 4
 
+// STEP 4
 /*
 var movies = [];
 movies[0] = "300";
@@ -84,7 +81,6 @@ for (var index in movies) {
 
 // STEP 8
 /*
-
 var movies = ["300", "Pulp Fiction", "Dazed and Confused", "Scarface", "No Country For Old Men", "The Wolf of Wall Street", "The Godfather"];
 var leastFavMovies = ["Bridget Jones's Diary", "Love Actually", "The Stepford Wives"];
 
@@ -99,18 +95,16 @@ for (var index in leastFavMovies) {
     leastFavMovies.sort();
     console.log(leastFavMovies[index]);
 }
-
 */
+
 // STEP 9
 /*
-
 var movies = ["300", "Pulp Fiction", "Dazed and Confused", "Scarface", "No Country For Old Men", "The Wolf of Wall Street", "The Godfather"];
 
 var leastFavMovies = ["Bridget Jones's Diary", "Love Actually", "The Stepford Wives"];
 
 movies = movies.concat(leastFavMovies);
 console.log(movies.sort().reverse());
-
 */
 
 // STEP 10
@@ -121,19 +115,16 @@ movies = movies.concat(leastFavMovies);
 
 lastMovie = movies.pop();
 console.log(lastMovie);
-
 */
 
 // STEP 11
 /*
-
 var movies = ["300", "Pulp Fiction", "Dazed and Confused", "Scarface", "No Country For Old Men", "The Wolf of Wall Street", "The Godfather"];
 var leastFavMovies = ["Bridget Jones's Diary", "Love Actually", "The Stepford Wives"];
 movies = movies.concat(leastFavMovies);
 
 firstMovie = movies.shift();
 console.log(firstMovie);
-
 */
 
 // STEP 12
@@ -142,10 +133,13 @@ var movies = ["300", "Pulp Fiction", "Dazed and Confused", "Scarface", "No Count
 var leastFavMovies = ["Bridget Jones's Diary", "Love Actually", "The Stepford Wives"];
 movies = movies.concat(leastFavMovies);
 console.log(leastFavMovies);
-console.log(movies.indexOf("Bridget Jones's Diary") + "\n" + movies.indexOf("Love Actually") + "\n" + movies.indexOf("The Stepford Wives"));
 
-movies.splice(7,3, "Goodfellas", "Platoon", "Fast Times at Ridgemont High ")
-console.log(movies);
+for (var index in leastFavMovies) {
+    console.log(movies.indexOf(leastFavMovies[index]));
+}
+
+movies.splice(7, 3, "Goodfellas", "Platoon", "Fast Times at Ridgemont High ");
+console.log(movies.toString());
 */
 
 // STEP 13
@@ -237,9 +231,7 @@ for (var index in movies) {
 // Practice with Functions 
 
 // STEP 1
-
 /*
-
 var displayMessage = function(string) {
     console.log(string);
 }
@@ -248,15 +240,12 @@ displayMessage("WHAT A COOL ANONYMOUS FUNCTION!");
 */
 
 // STEP 2
-
 /*
-
 function calculate(num1, num2) {
     return num1 % num2;
 }
 
 console.log(calculate(20, 3));
-
 */
 
 // STEP 3
